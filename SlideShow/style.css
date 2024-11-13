@@ -1,0 +1,53 @@
+
+#backImage img{
+    width: 45%;
+    height: 60vh;
+    background-size: cover;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 14px;
+    box-shadow: 10px 10px 5px 3px rgb(162, 212, 227);
+
+}
+
+#backImage{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slideImg{
+    width: 100px;
+    height: 80px;
+    background-size: cover;
+    margin: auto;
+}
+
+#images div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+#images{
+    width: 80%;
+    margin: auto;
+}
+
+
+.carousel-control-prev span,.carousel-control-next span{
+    background-color: rgb(58, 122, 217);
+    padding: 15px;
+    border-radius: 14px;
+}
+
+
+.carousel-control-prev,.carousel-control-next{
+    height: 100px;
+    margin-top: 200px;
+    width: 10px;
+}
+
+#container{
+    width: 90%;
+    margin: auto;
+}
