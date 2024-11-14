@@ -26,11 +26,12 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-
+    cursor: pointer;
 }
 #images{
     width: 80%;
     margin: auto;
+    box-shadow: 10px 10px 5px 3px rgb(162, 212, 227);
 }
 
 
