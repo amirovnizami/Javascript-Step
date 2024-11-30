@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="productDetails.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="relative">
+    <div class=" w-[81%] m-[auto]" id="container">
+        <div id="navbar" class="flex justify-between mt-[51px] mb-[99px]">
+            <h3 class="font-bold text-[24px]">Exclusive</h3>
+            <div id="searchBox" class="flex gap-[24px] justify-center items-center">
+                <div class=" relative bg-[#F5F5F5] pt-[7px] pb-[7px] pl-[20px] pr-[12px] ">
+                    <input id="searchInput" class="w-[243px] bg-[#F5F5F5] font-poppins text-xs font-normal focus:outline-none" type="text"
+                        placeholder="What are you looking for? ">
+                    <i class="absolute top-[34%] right-[10px] fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="basket.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="homepage.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+        </div>
+        <!-- <div class="searchWindow w-[100%] h-[900px] bg-red-600">
+            <h3 class="font-semibold text-[36px] leading 10">Samsung</h3>
+            <div class="grid grid-cols-3 w-full">
+                <div class="item"><img src="" alt=""></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div> -->
+        <main id="content" class="grid grid-cols-[1fr_2fr_2fr] mb-[100px]">
+            <div class="product-view flex flex-col gap-y-4 w-[170px] mr-[30px]">
+                <div class="view w-[170px] h-[138px]"><img src="images/Frame 896.png" alt=""></div>
+                <div class="view w-[170px] h-[138px]"><img src="images/Frame 897.png" alt=""></div>
+                <div class="view w-[170px] h-[138px]"><img src="images/Frame 919.png" alt=""></div>
+                <div class="view w-[170px] h-[138px]"><img src="images/Frame 919.png" alt=""></div>
+            </div>
+            <div class="main-view h-[550px] w-[450px] bg-cover">
+                <img class="w-full h-full object-cover" src="images/Frame 894.png" alt="">
+            </div>
+            <div class="product-detail ml-[71px]">
+                <h3 class="text-base font-semibold">Havic HV G-92 Gamepad</h3>
+                <p class="text-sm font-normal text-[#00FF66] my-4"><span
+                        class="w-[16px] text-[#000000] mr-4 opacity-50">|</span>in Stock</p>
+                <p class="text-base font-normal text-[#000000] mt-4 mb-4">$192.00</p>
+                <p class="text-sm font-semibold leading-6 text-[#000000] font-poppins mb-6">PlayStation 5 Controller
+                    Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal
+                    Pressure sensitive.</p>
+                <hr class="text-[#000000] border-[1px] mb-[100px]">
+                <div class="addBaskets flex gap-8 mb-[30px]">
+
+                    <div class="countDiv w-[159px] h-[34px] flex">
+                        <p class="minus flex-1 border-[1px] rounded text-center cursor-pointer hover:bg-[#DB4444] hover:text-white">-</p>
+                        <p class="count flex-[2] border-[1px] rounded text-center">2</p>
+                        <p class="plus flex-1 border-[1px] rounded text-center cursor-pointer hover:bg-[#DB4444] hover:text-white">+</p>
+                    </div>
+                    <button
+                        class="addBtn w-[224px] h-[34px] rounded border-[1px] hover:bg-[#DB4444] hover:text-white">Add
+                        to Basket</button>
+                </div>
+
+                <div class="delivery">
+                    <img src="images/Frame 911.jpg" alt="">
+                </div>
+            </div>
+        </main>
+        <main id="relatedItems" class="mb-[30px]">
+            <div class="header flex items-center gap-[10px] mb-[60px]">
+                <div class="w-[20px] h-[40px] bg-[#DB4444]"></div>
+                <h4 class="font-semibold text-[#DB4444]">Related Items</h4>
+            </div>
+            <div class="items flex gap-[42px]">
+                <div class="item rounded relative group">
+                    <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+                        <img src="images/g92-2-500x500 1.png" alt="">
+                    </div>
+                    <p class="my-[8px] font-poppins font-medium text-base">HAVIT HV-G92 Gamepad</p>
+                    <p class="text-[#DB4444]">$120</p>
+                    <button
+                        class="addBasket text-center w-full h-[41px] bg-[#000000] text-white rounded font-poppins font-medium text-base hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 top-[71%] group-hover:block">
+                        Add to Basket
+                    </button>
+                </div>
+                <div class="item rounded relative group">
+                    <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+                        <img src="images/gammaxx-l240-argb-1-500x500 1.png" alt="">
+                    </div>
+                    <p class="my-[8px] font-poppins font-medium text-base">RGB liquid CPU Cooler</p>
+                    <p class="text-[#DB4444]">$160</p>
+                    <button
+                        class="addBasket text-center w-full h-[41px] bg-[#000000] text-white rounded font-poppins font-medium text-base hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 top-[71%] group-hover:block">
+                        Add to Basket
+                    </button>
+                </div>
+                <div class="item rounded relative group">
+                    <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+                        <img src="images/ak-900-01-500x500 1.png" alt="">
+                    </div>
+                    <p class="my-[8px] font-poppins font-medium text-base">AK-900 Wired Keyboard</p>
+                    <p class="text-[#DB4444]">$960</p>
+                    <button
+                        class="addBasket text-center w-full h-[41px] bg-[#000000] text-white rounded font-poppins font-medium text-base hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 top-[71%] group-hover:block">
+                        Add to Basket
+                    </button>
+                </div>
+                <div class="item rounded relative group">
+                    <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+                        <img src="images/g27cq4-500x500 1.png" alt="">
+                    </div>
+                    <p class="my-[8px] font-poppins font-medium text-base">IPS LCD Gaming Monitor</p>
+                    <p class="text-[#DB4444]">$370</p>
+                    <button
+                        class="addBasket text-center w-full h-[41px] bg-[#000000] text-white rounded font-poppins font-medium text-base hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 top-[71%] group-hover:block">
+                        Add to Basket
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <footer class="bg-[#000000] w-[100%] h-[450px] mt-[170px] ">
+        <div class="flex text-[#FAFAFA] justify-center  justify-between pt-[80px] mb-[100px] mx-[135px]">
+            <div class="item flex flex-col gap-y-6 relative">
+                <h3 class="font-bold text-[24px] leading-6 font-poppins">Exclusive</h3>
+                <p class="font-medium text-[20px] leading-8 fony-poppins">Subscribe</p>
+                <p class="font-normal text-[16px] leading-6 font-poppins">Get 10% off your first order</p>
+                <input class="bg-[#000000] border-[1.5px] pl-4 py-3 focus:outline-none " type="text " placeholder="Enter your email">
+                <img class="absolute top-[74%] right-[10px] pr-4 py-3 hover:cursor-pointer" src="images/Vector.png"
+                    alt="">
+            </div>
+            <div class="item item flex flex-col gap-y-6 ">
+                <h3 class="text-[20px] leading-8 fony-poppins">Support</h3>
+                <p class="font-normal text-[16px] leading-6 font-poppins">111 Bijoy sarani, Dhaka,<br> DH 1515,
+                    Bangladesh.</p>
+                <p class="font-normal text-[16px] leading-6 font-poppins"><a href="mailto:example@gmail.com">exclusive@gmail.com</a></p>
+                <p class="font-normal text-[16px] leading-6 font-poppins"><a href="https://wa.me/994501234567" target="_blank">
+                    +88015-88888-9999
+                  </a></p>
+            </div>
+            <div class="item item flex flex-col gap-y-6 ">
+                <h3 class="text-[20px] leading-8 fony-poppins">Account</h3>
+                <p class="font-normal text-[16px] leading-6 font-poppins"><a href="myAccount.html">My account</a></p>
+                <p class="font-normal text-[16px] leading-6 font-poppins"> <a href="login.html">Login</a> / <a href="register.html">Register</a></p>
+                <p class="font-normal text-[16px] leading-6 font-poppins"><a href="basket.html">Basket</a></p>
+            </div>
+            <div class="item item flex flex-col gap-y-6 ">
+                <h3 class="text-[20px] leading-8 fony-poppins">Quick Link</h3>
+                <p class="font-normal text-[16px] leading-6 font-poppins">Privacy Policy</p>
+                <p class="font-normal text-[16px] leading-6 font-poppins">Terms Of Use</p>
+            </div>
+            <div class="item">
+                <img src="images/Frame 742.png" alt="">
+            </div>
+        </div>
+        <div class="text-center">
+            <hr class="border-[1px] opacity-[40%] ">
+            <p class="text-poppins text-[#808080] mt-5"><i class="fa-regular fa-copyright"></i> Copyright Rimel 2022. All right reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
