@@ -1,5 +1,5 @@
 const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGFmMmI5Mjc4ODFkNzY3MWJiODBiOCIsImlhdCI6MTczMjk4NzgxMSwiZXhwIjoxNzMyOTg4MTExfQ.OJUmOGW2uzEMkrMfxQTgUhC2R-Q9CcpeCLLemLbUROI"
-const viewAll =false;
+const viewAll = false;
 jQuery(document).ready(() => {
     $("#searchInput").on("input", (e) => {
         const searchTerm = e.target.value.trim();
@@ -13,8 +13,9 @@ jQuery(document).ready(() => {
             $('#relatedItems').removeClass('blurred');
         }
         $(document).on("click", ".addViewAll", function () {
-            viewAll = true
-            searchProduct(searchTerm)
+            $(".searchWindow").remove()
+            $('#content').removeClass('blurred');
+            $('#relatedItems').removeClass('blurred');
         });
     });
 });
@@ -67,8 +68,8 @@ async function searchProduct(term) {
         console.log(item.title)
     })
     const arr = allProducts
-    if(!viewAll){
-        arr.slice(0,8)
+    if (!viewAll) {
+        arr.slice(0, 8)
     }
     const productHtml = arr
         .map(item => {
@@ -93,8 +94,8 @@ async function searchProduct(term) {
             <div class="grid grid-cols-4 w-full gap-[30px]">
                 ${productHtml}
             </div>
-            <div class="flex justify-center absolute center  mt-6 text-center w-[100%] pt-4">
-                <button class="addViewAll bg-red-500 text-white py-2 px-6 rounded-lg">View More</button>
+            <div class=" closeBtn flex justify-center absolute center  mt-6 text-center w-[100%] pt-4">
+                <button class="addViewAll bg-red-500 text-white py-2 px-6 rounded-lg">Close</button>
             </div>
         </div>
         `;
@@ -222,8 +223,8 @@ async function openRelatedItems(category) {
             Add to Basket
         </button>
     </div>
-    <div class="item rounded relative group  bg-cover bg-center object-cover overflow-hidden">
-        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+    <div class="item rounded relative group  ">
+        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center bg-cover bg-center object-cover overflow-hidden">
             <img class="r-img" src="${products[len - 2].gallery[0]}" alt="" data-id = ${products[len - 2]._id}>
         </div>
         <p class="my-[8px] font-poppins font-medium text-base">${products[len - 2].title}</p>
@@ -233,8 +234,8 @@ async function openRelatedItems(category) {
             Add to Basket
         </button>
     </div>
-    <div class="item rounded relative group  bg-cover bg-center object-cover overflow-hidden">
-        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+    <div class="item rounded relative group  ">
+        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center bg-cover bg-center object-cover overflow-hidden">
             <img class="r-img" src="${products[len - 4].gallery[0]}" alt="" data-id = ${products[len - 4]._id}>
         </div>
         <p class="my-[8px] font-poppins font-medium text-base">${products[len - 4].title}</p>
@@ -244,8 +245,8 @@ async function openRelatedItems(category) {
             Add to Basket
         </button>
     </div>
-    <div class="item rounded relative group  bg-cover bg-center object-cover overflow-hidden">
-        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center">
+    <div class="item rounded relative group  bg-cover ">
+        <div class="px-[40px] py-[35px] bg-[#F5F5F5] h-[250px] flex items-center justify-center bg-cover bg-center object-cover overflow-hidden">
             <img class="r-img" src="${products[len - 5].gallery[0]}" alt="" data-id = ${products[len - 5]._id}>
         </div>
         <p class="my-[8px] font-poppins font-medium text-base">${products[len - 4].title}</p>
